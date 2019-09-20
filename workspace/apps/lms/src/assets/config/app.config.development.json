@@ -1,0 +1,15 @@
+{
+  "loggingConfig": {
+    "applicationName": "Angularlicious.LMS",
+    "version": "1.0.0",
+    "isProduction": false
+  },
+  "logglyConfig": {
+    "apiKey": "01e4b3aa-f301-43e7-bf60-40ba5d0729d4",
+    "sendConsoleErrors": true
+  },
+  "errorHandlingConfig": {
+    "name": "Angularlicious.LMS",
+    "includeDefaultErrorHandling": true
+  }
+}

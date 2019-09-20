@@ -1,0 +1,11 @@
+.cdk-overlay-backdrop {
+  opacity: 0.85; /* default value: .48 */
+  background-color: orange; /* default value: rgba(33, 33, 33, 1.0) */
+  align-content: center;
+  background: darkorange;
+}
+
+.mat-dialog-container {
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  background: green;
+}

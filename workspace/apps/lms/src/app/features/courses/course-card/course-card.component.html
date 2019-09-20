@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header card-header-danger">
+    <h4 class="card-title ">{{ course.title }}</h4>
+  </div>
+  <div class="card-body">
+    <p>{{ course.description }}</p>
+  </div>
+  <div class="card-footer">
+    <a [routerLink]="['/courses/course', course.id]" class="btn btn-simple btn-primary btn-round">View</a>
+  </div>
+</div>

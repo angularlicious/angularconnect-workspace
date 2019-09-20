@@ -1,0 +1,47 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="material-form">
+          <div class="card">
+            <div class="card-header card-header-warning">
+              <h4 class="card-title">Add Course</h4>
+            </div>
+            <div class="card-body">
+              <!-- COURSE CATEGORY SELECTION -->
+              <div class="form-field-section">
+                <mat-form-field class="full-width">
+                  <mat-label>Course Category</mat-label>
+                  <mat-select formControlName="category">
+                    <!-- https://stackoverflow.com/questions/35750059/select-based-on-enum-in-angular2 -->
+                    <mat-option *ngFor="let item of categories | enumKeys" [value]="item.value">{{ item.key }} </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <!-- COURSE TITLE -->
+              <div class="form-field-section">
+                <mat-form-field>
+                  <input matInput placeholder="Enter the title of your course." formControlName="title" />
+                </mat-form-field>
+              </div>
+
+              <!-- COURSE DESCRIPTION -->
+              <div class="form-field-section">
+                <mat-form-field>
+                  <textarea matInput placeholder="Enter course description." name="description" formControlName="description" rows="5"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="card-footer">
+              <!-- COURSE SUBMIT BUTTON -->
+              <div class="form-field-section">
+                <button mat-raised-button type="submit" color="default" [disabled]="!formGroup.valid">Add Course</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

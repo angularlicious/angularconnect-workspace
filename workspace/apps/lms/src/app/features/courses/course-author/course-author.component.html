@@ -1,0 +1,13 @@
+<ng-container *ngIf="author.user">
+  <div class="card card-profile" *ngIf="author.user">
+    <div class="card-avatar">
+      <a href="javascript:void(0)"><img class="img" src="https://lh3.googleusercontent.com/a-/AAuE7mCkGojX-kDZJ6mNTSeWGt_8LKC7Q9fd_jilUkBIig"/></a>
+    </div>
+    <div class="card-body">
+      <h6 class="card-category text-gray"></h6>
+      <h4 class="card-title">{{ author.user.displayName }}</h4>
+      <p class="card-description">{{ author.bio }}</p>
+      <a class="btn btn-danger btn-round" href="javascript:void(0)">Follow</a>
+    </div>
+  </div>
+</ng-container>

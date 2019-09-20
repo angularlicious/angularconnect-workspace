@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <ng-container *ngIf="showCourse$ | async">
+          <h2>{{ course.title }}</h2>
+          <p>{{ course.description }}</p>
+          <ng-container *ngIf="showVideos$ | async; else elseTemplate">
+            <ng-container *ngFor="let video of videos$ | async">
+              <lms-video-player [video]="video"></lms-video-player>
+            </ng-container>
+          </ng-container>
+          <ng-template #elseTemplate>
+            // show spinner here;
+          </ng-template>
+        </ng-container>
+      </div>
+      <ng-container *ngIf="showAuthor$ | async">
+        <div class="col-md-4">
+          <lms-course-author [author]="author$ | async"></lms-course-author>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

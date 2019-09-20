@@ -1,0 +1,12 @@
+<ng-container *ngIf="showVideo$ | async">
+  <div class="section">
+    <!-- DISPLAY A SELECTED/TARGET COURSES :: START -->
+    <div class="row">
+      <div class=" col-12" *ngIf="true">
+        <ng-container>
+          <lms-video-player [video]="video"></lms-video-player>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-container>
